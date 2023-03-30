@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/cercoil.png"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Frontend Mentor | Results summary component</title>
+
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="result-container">
+        <div class="res"><p>your result</p></div>
+
+        <div class="persentg">
+          <p class="h1">76</p>
+          <p class="p">of 100</p>
+        </div>
+
+        <div class="info-container">
+          <h1>great</h1>
+          <p>
+            you scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </div>
+
+      <div class="Summary-container">
+        <div class="sum"><p>summary</p></div>
+
+        <div class="lines">
+          <div class="reac">
+            <p class="re"><i class="fa-solid fa-bolt-lightning"></i>reaction</p>
+            <p class="score">80 / <span class="one-h">100</span></p>
+          </div>
+
+          <div class="memo">
+            <p class="me"><i class="fa-solid fa-brain"></i>memory</p>
+            <p class="score">92 / <span class="one-h">100</span></p>
+          </div>
+
+          <div class="verbal">
+            <p class="ver"><i class="fa-solid fa-comment"></i>verbal</p>
+            <p class="score">61 / <span class="one-h">100</span></p>
+          </div>
+
+          <div class="visual">
+            <p class="vis"><i class="fa-solid fa-eye"></i>visual</p>
+            <p class="score">72 / <span class="one-h">100</span></p>
+          </div>
+        </div>
+
+        <button class="btn">continue</button>
+        
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;500;600;700;900&family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+body{
+    height: 100vh;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-color: #eee;
+}
+
+.card-container{
+    display: flex;
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    width: 640px;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom,hsl(252, 100%, 67%) 5%, hsl(241, 81%, 54%) 75%);
+    color: #fff;
+}
+
+.result-container .res{
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    opacity: 0.8;
+    margin: 35px 0;
+}
+
+.result-container .persentg{
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    background-image: linear-gradient(to bottom,hsla(256, 72%, 46%, 1) 5%, hsla(241, 81%, 54%, 0.637));
+    border-radius: 50vmax;
+}
+
+h1,
+p{
+    margin: 0;
+}
+
+.result-container .persentg .h1{
+    font-weight: 800;
+    font-size: 60px;
+}
+
+.result-container .persentg .p{
+    opacity: 0.5;
+}
+
+.info-container{
+    text-align: center;
+    text-align-last: center;
+    margin: 30px 53px 50px;
+}
+
+.info-container h1{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 1.75rem;
+}
+
+.info-container p{
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.info-container p::first-letter{
+    text-transform: uppercase;
+}
+
+.Summary-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.sum{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    margin: 0 0 0 33px;
+    align-self: flex-start;
+}
+
+.lines{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.lines div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
+    height: 50px;
+    text-transform: capitalize;
+    border-radius: 0.5vmax;
+}
+
+.lines .reac{
+    background-color: hsla(0, 100%, 67%, 0.089);
+}
+
+.lines .reac .re{
+    color: hsl(0, 100%, 67%);
+}
+
+.lines .memo .me{
+    color: hsl(39, 100%, 56%);
+}
+
+.lines .memo{
+    background-color: hsl(39, 100%, 56%, 0.089);
+}
+
+.lines .verbal .ver{
+    color: hsl(166, 100%, 37%);
+}
+
+.lines .verbal{
+    background-color: hsl(166, 100%, 37%, 0.089);
+}
+
+.lines .visual .vis{
+    color: hsl(234, 85%, 45%);
+}
+
+.lines .visual{
+    background-color: hsl(234, 85%, 45%, 0.089);
+}
+
+.lines .reac .re i,
+.lines .memo .me i,
+.lines .verbal .ver i,
+.lines .visual .vis i{
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.lines .reac,
+.lines .memo,
+.lines .verbal,
+.lines .visual{
+    padding-left: 20px;
+}
+
+.score {
+    padding-right: 20px;
+}
+
+.one-h{
+    opacity: 0.5;
+}
+
+.btn{
+    width: 80%;
+    height: 50px;
+    border-radius: 50vmax;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: hsl(224, 30%, 27%);
+    cursor: pointer;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+    background-image: linear-gradient(to bottom,hsl(252, 100%, 67%) 5%, hsl(241, 81%, 54%) 75%);
+}
+
+
+
+
+@media (max-width: 375px){
+    .card-container{
+        flex-direction: column;
+    }
+
+    .result-container{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .Summary-container{
+        width: 100%;
+    }
+
+    .sum {
+        font-size: 1.2rem;
+        margin: 18px 0 18px 33px;
+      }
+}
+        </style>
+      </div>
+    </div>
+  </body>
+</html>
